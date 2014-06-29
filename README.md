@@ -18,3 +18,9 @@ Backend:
 FrontEnd
   1. Bootstrap
   2. JQuery
+
+Features:
+  1. User management
+  2. Company Management.
+  3. Product Management.
+  4. Warehouse Management.
