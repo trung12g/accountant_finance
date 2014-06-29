@@ -4,13 +4,19 @@ import java.math.BigInteger;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "company_type")
-public class Company_Type {
+@Table(name = "company_position")
+public class CompanyPosition {
 	@Id
 	BigInteger id;
+
+	@ManyToOne
+	@JoinColumn(name = "companyId")
+	Company company;
 
 	String name;
 	String description;
@@ -21,6 +27,14 @@ public class Company_Type {
 
 	public void setId(BigInteger id) {
 		this.id = id;
+	}
+
+	public Company getCompany() {
+		return company;
+	}
+
+	public void setCompany(Company company) {
+		this.company = company;
 	}
 
 	public String getName() {
@@ -38,4 +52,5 @@ public class Company_Type {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
 }

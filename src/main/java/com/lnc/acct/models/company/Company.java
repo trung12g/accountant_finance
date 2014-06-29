@@ -22,7 +22,7 @@ public class Company {
 
 	@OneToOne
 	@JoinColumn(name="typeId")
-	Company_Type type;
+	CompanyType type;
 
 	public BigInteger getId() {
 		return id;
@@ -48,11 +48,11 @@ public class Company {
 		this.startWorkingDate = startWorkingDate;
 	}
 
-	public Company_Type getType() {
+	public CompanyType getType() {
 		return type;
 	}
 
-	public void setType(Company_Type type) {
+	public void setType(CompanyType type) {
 		this.type = type;
 	}
 }
